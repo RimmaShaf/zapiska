@@ -26,6 +26,7 @@ server.get('/check_note', function(req,res){
 
 
 var port = 10001;
-server.listen(port, function(){
+
+server.listen(process.env.PORT || 5000, function(){
 	console.log('server listening on port '+ port);
 });
