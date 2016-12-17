@@ -30,7 +30,7 @@
 	function sendNote() {
 		var name=$('#name').val();
 		var note = $('#note').val();
-		$.ajax({url: "http://127.0.0.1:10001/create_note", type:'GET', data: { name: name, note: note }}).done(function(data){
+		$.ajax({url: "/create_note", type:'GET', data: { name: name, note: note }}).done(function(data){
 			console.log(data);
 			$('#what').text(data.Note);
 			$('#from').text(data.Name);
