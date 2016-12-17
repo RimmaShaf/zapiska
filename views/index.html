@@ -40,7 +40,7 @@
 	function checkNote() {
 		var name=$('#name').val();
 		var note = $('#note').val();
-		$.ajax({url: "http://127.0.0.1:10001/check_note", type:'GET'}).done(function(data){
+		$.ajax({url: "/check_note", type:'GET'}).done(function(data){
 			console.log(data);
 			$('#what').text(data.Note);
 			$('#from').text(data.Name);
